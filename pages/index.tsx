@@ -37,6 +37,10 @@ export async function getServerSideProps(context: any) {
 export default function Home({
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  interface IPk {
+    name:string
+  }
+  
   const [list, setList] = useState([]);
   const pktest = async () => {
     const pokemons = await axios.get('/api/pokemon').then((res) => res);
