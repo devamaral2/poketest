@@ -40,7 +40,7 @@ export default function Home({
   interface IPk {
     name:string
   }
-  
+
   const [list, setList] = useState([]);
   const pktest = async () => {
     const pokemons = await axios.get('/api/pokemon').then((res) => res);
@@ -55,8 +55,9 @@ export default function Home({
       <h1>
         Pokemon
       </h1>
+      <img src="pokemon.png" alt="Vercel Logo" className="logo" />
       <ul>
-        { list.map((pokemon) => (
+        { list.map((pokemon: IPk) => (
           <li>
             {' '}
             { pokemon.name }
@@ -64,7 +65,6 @@ export default function Home({
           </li>
         ))}
       </ul>
-
     </div>
   );
 }
