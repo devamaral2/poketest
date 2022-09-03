@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
 import React, { JSXElementConstructor, useEffect, useState } from 'react';
 import axios from 'axios';
 
