@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import axios from 'axios';
-import Image from 'next/image';
+// import Image from 'next/image';
 // import styles from '../index.module.css';
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
     const pokemons = await axios.get(`https://pokeapi.co/api/v2/pokemon/${num}`).then((res) => res);
     setPoke(pokemons.data);
     console.log(pokemons.data);
-  }
+  };
   return (
     <div className="container">
       <Head>
@@ -62,11 +62,12 @@ export default function Home() {
         <div>
           <h2>{poke.name}</h2>
           <img
-            width="400px"
+            width="300px"
             // height="200px"
             src={poke.sprites.other.dream_world.front_default}
             alt="Vercel Logo"
-            className="logo"/>
+            className="logo"
+          />
         </div>
       )}
       {/* <style jsx>

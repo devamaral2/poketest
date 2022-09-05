@@ -30,18 +30,18 @@ export const joana = async () => {
     timestamp: entity.timestamp,
   }));
   return final;
-}
+};
 
 const rodrigo = async () => {
   const db = await connectToDatabase();
   const collection = db.collection('saved');
   return collection;
-}
+};
 
 const claudia = async (req: NextApiRequest, res: NextApiResponse<IPk[]>) => {
   const collection = await rodrigo();
   const poke = await collection.find().toArray();
-  const date = new Date();
+  // const date = new Date();
   // await collection.insertOne({name: 'Celia2', timestamp: date });
   const final = poke.map((entity) => ({
     name: entity.name,
