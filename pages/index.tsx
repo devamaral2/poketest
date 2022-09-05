@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/jsx-filename-extension */
 import React, { useEffect, useState } from 'react';
@@ -13,7 +14,7 @@ export default function Home() {
   }
 
   const [list, setList] = useState([]);
-  const [poke, setPoke] = useState({});
+  const [poke, setPoke] = useState({} as any);
   const pktest = async () => {
     const pokemons = await axios.get('/api/pokemon').then((res) => res);
     setList(pokemons.data);
