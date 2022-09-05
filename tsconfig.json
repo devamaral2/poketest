@@ -15,6 +15,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "cypress/e2e/index.spec.js", "tests/try.test.js", "tests/try.test.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "cypress/e2e/index.spec.js", "tests/try.test.js", "tests/try.test.js", "pages/index.jsx"],
   "exclude": ["node_modules"]
 }

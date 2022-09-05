@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import axios from 'axios';
 // import Image from 'next/image';
-// import styles from '../index.module.css';
+import styles from '../index.module.css';
 
 export default function Home() {
   interface IPk {
@@ -31,12 +31,12 @@ export default function Home() {
     console.log(pokemons.data);
   };
   return (
-    <div className="container">
+    <div className={styles.container}>
       <Head>
         <title>Pokemon monocard</title>
         <link rel="icon" href="/pokebola-icon.png" />
       </Head>
-      <img src="pokemon.png" alt="Vercel Logo" className="logo" />
+      <img src="pokemon.png" alt="Vercel Logo" className={styles.logo} />
       <div className="menu">
         <img src="pokebola.png" alt="Vercel Logo" className="pokebola" />
         <img src="lista.png" alt="Vercel Logo" className="lista" />
@@ -63,7 +63,7 @@ export default function Home() {
         <div>
           <h2>{poke.name}</h2>
           <img
-            width="300px"
+            width="200px"
             // height="200px"
             src={poke.sprites.other.dream_world.front_default}
             alt="Vercel Logo"
@@ -71,6 +71,27 @@ export default function Home() {
           />
         </div>
       )}
+      <div className={styles.shadow} />
+      <div className={styles.pokeball}>
+        <div className={styles.top} />
+        <div className={styles.bottom} />
+        <div className={styles.middle} />
+
+      </div>
+      <style jsx global>{`
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+            sans-serif;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+      `}</style>
       {/* <style jsx>
         {`
         .container {
