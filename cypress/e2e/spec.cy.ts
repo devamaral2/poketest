@@ -1,9 +1,21 @@
 /* eslint-disable no-undef */
-/* eslint-disable eol-last */
+
 describe('empty spec', () => {
-  it('passes', () => {
+  before(() => {
+    cy.fixture('mockList').then((mockList) => {
+      cy.intercept('GET', '**pokemon', {
+        statusCode: 200,
+        body: mockList,
+      }).as('mockList');
+    });
     cy.visit('http://localhost:3000/');
-    cy.get('h1').contains('Pokemon');
+  });
+  it('passes', () => {
+    cy.get('li').contains('pikaju');
+  });
+  it('passes23', () => {
     cy.get('li').contains('pikaju');
   });
 });
+
+export {};

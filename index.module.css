@@ -1,0 +1,22 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+width: 60%;
+max-width: 30rem;
+}
+.menu {
+display: flex;
+background-color: red;
+justify-content: space-aroud;
+}
+.pokebola {
+width: 30%;
+}
+.lista {
+width: 30%;
+}
