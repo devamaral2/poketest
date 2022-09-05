@@ -1,3 +1,4 @@
+
 .container {
   background-color: whitesmoke;
   min-height: 100vh;
@@ -6,20 +7,24 @@
   flex-direction: column;
   align-items: center;
 }
+
 .logo {
-width: 80%;
-max-width: 30rem;
+  width: 80%;
+  max-width: 30rem;
 }
+
 .menu {
-display: flex;
-background-color: red;
-justify-content: space-aroud;
+  display: flex;
+  background-color: red;
+  justify-content: space-aroud;
 }
+
 .pokebola {
-width: 30%;
+  width: 30%;
 }
+
 .lista {
-width: 30%;
+  width: 30%;
 }
 
 .pokeball {
@@ -99,6 +104,7 @@ width: 30%;
 }
 
 @keyframes wobble {
+
   0%,
   20%,
   24%,

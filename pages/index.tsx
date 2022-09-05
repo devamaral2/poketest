@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/jsx-filename-extension */
@@ -78,7 +79,8 @@ export default function Home() {
         <div className={styles.middle} />
 
       </div>
-      <style jsx global>{`
+      <style jsx global>
+        {`
         html,
         body {
           padding: 0;
@@ -91,7 +93,9 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
-      `}</style>
+      `}
+
+      </style>
       {/* <style jsx>
         {`
         .container {
